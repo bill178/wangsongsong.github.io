@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>我们的爱情故事</title>
+    
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="./css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/garden.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <div id="content" style="width: 1110px; height: 625px; margin-top: 52px; margin-left: 245px;">
+            <div id="code" style="margin-top: 112.5px;">
+                <span class="comments">/**</span><br>
+                <span class="space"><span class="comments">*因为我是一个程序员,</span><br>
+                <span class="space"><span class="comments">*所以我写一些代码来显示我对你的爱.</span><br>
+                <span class="space"><span class="comments">*/</span><br>
+                Boy i = <span class="keyword">new</span> Boy(<span class="string">"王松松"</span>);<br>
+                Girl u = <span class="keyword">new</span> Girl(<span class="string">"马鑫菲"</span>);<br>
+                <span class="comments">// 2015年3月30日,我们在一起. </span><br>
+                i.love(u);<br>
+                <span class="comments">// 我们开始，就是异地恋，这个漫长难熬的时间就是死循环！！</span><br>
+				 start:
+    			 <span class="keyword"> while</span>(true){<br>
+                <span class="comments">// 每天我们不能见面，我不能照顾你<br>
+				<span class="keyword">$("i")</span>.notakeCareOf(<span class="keyword">u</span>);<br>
+				<span class="comments">// 你不能看见我<br>
+				<span class="keyword">$("u")</span>.notSee(<span class="keyword">i</span>);<br>
+                <span class="comments">// 我们每天用电话沟通</span><br>
+                <span class="keyword">$("i")</span>.concat(u);<br>
+				
+				 <span class="comments">// 直到我们领证，我回到了你身边</span><br>
+                <span class="keyword">i</span>.near(<span class="keyword">u</span>);<br>
+				<span class="keyword">i</span>.have(<span class="keyword">Marriage license</span>);<br>
+				<span class="keyword">u</span>.have(<span class="keyword">Marriage license</span>);<br>
+				 <span class="comments">//这个死循环被打破了！！ </span><br>
+					  <span >break start</span><br>
+				}<br>
+            
+                <span class="comments">//今天你必须嫁给我！！！余生我养你！！</span><br>
+                <span class="keyword">u</span> .mustMarry(<span class="keyword">me</span>);<br>
+ 
+		
+            </span></span></span></span></span></span></span>_</div>
+            <div id="loveHeart">
+                <canvas id="garden" width="670" height="625"></canvas>
+                <div id="words" style="position: absolute; top: 257px; left: 765px;">
+                    <div id="messages" style="display: block;">
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-3712320065678109";
+/* lovead */
+google_ad_slot = "0650322805";
+google_ad_width = 320;
+google_ad_height = 50;
+//-->
+</script>
+</center>
+                        马鑫菲，我们要永远幸福下去！
+						在此，我郑重的承诺：
+						
+                        <div id="elapseClock" style="display:none"></div>
+                        <a href="index5.html" id="accept">点击承诺</a>
+                    </div>
+                    <div id="loveu" style="display: block;">
+                        爱你，直到永永远远。<br>
+                        <div class="signature">- Love</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 10000);
+            
+            $("#accept").click(function(){
+                $(this).hide();
+                $("#elapseClock").show();
+                var together = new Date();
+                timeElapse(together);
+                setInterval(function () {
+                    timeElapse(together);
+                }, 500);
+            })
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+	<audio src="20140413_025646.mp3" autoplay="autoplay"></audio>
+
+</body></html>

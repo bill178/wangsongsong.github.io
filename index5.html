@@ -1,0 +1,125 @@
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>你若不离不弃 我必生死相依</title>
+<style type="text/css">
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: #FF62FF;
+}
+.content {
+    width: 80%;
+    color: #90F;
+    height: 100%;
+    top: 0px;
+    left: 10%;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: "微软雅黑";
+    margin-top: 0px;
+}
+body {
+    color: #FFF;
+    padding: 10px;
+    background: #FFF url(bg.jpg) no-repeat fixed top center;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.des {
+    font-size: 15px;
+    color: #3C3C3C;
+    /*width: 100%;*/
+    text-shadow : 0px 0px 1px #fff;
+    z-index:1000;                   
+    right:20px;
+    position:fixed !important;
+    bottom:0px;
+}
+.des a {
+    color: #3C3C3C;
+    text-shadow : 0px 0px 1px #fff;
+}
+</style>
+<script src="./js/jquery.min.js" language="javascript" type="text/javascript"></script>
+<script src="./js/tao.js" language="javascript" type="text/javascript"></script>
+<script>
+$(document).ready(function(e) {
+    /*禁止右键和隐藏鼠标*/
+    $("body").bind("contextmenu", function() {
+      return false;
+    });
+    
+    /*定义文字最底部显示到哪儿*/
+    var guangs=["　","|","　","|"];
+    var guangBiao="/";
+    var guangSub=0;
+    var guang=setInterval("$.guang()",120);
+    
+    var subs=0;
+    var string="本人王松松在婚后保证会做到以下几点…… ██1、和妻子大人逛街或者去其他地方的时候，目光一定不会在其他女人身上停留三秒钟!██2、结婚以后，我自愿承担家中所有的家务!██3、当老婆大人心中郁闷的时候，我会第一时间站出来给她当出气筒!██4、老婆大人给我下的口令，不管多难我一定立刻执行!██5、老婆大人说的话不管是对的还是错的，我都会认为是正确的!在婚后保证书怎么写的问题中，为了让自己的老婆更加满意，必须要写这一条在保证书中哦!██6、不管在什么时候、什么地方，我都会积极的制造一些浪漫的元素，做一些浪漫的举止!██7、本人的钱财在结婚之后无条件的交给娘子大人小红保管!██8、在今后如果有了爱情的结晶，我保证疼老婆比疼宝宝更多一些!██████████ 本人签名：王松松";
+    $.intent=function(str){
+        str="　　"+str;
+        //var reg=new RegExp("/█{1,2}/","i"); //创建正则RegExp对象
+        str=str.replace(eval("/█/gi"),"█");
+
+        return str;
+    }
+    string=$.intent(string);
+    
+    var echo=setInterval("$.echo()",300);
+    
+    $.guang=function(){
+          if(guangSub<guangs.length-1){
+                guangSub++;
+              }else{
+                  guangSub=0;
+                  }
+            guangBiao=guangs[guangSub];
+            $("#guang").html(guangBiao);
+            
+        }
+    
+    $.echo=function(){
+        if(subs<string.length){
+        $("#txt").html($("#txt").html()+$.repl(string.substr(subs,1)));
+        if($("#guang").offset().top > document.body.scrollHeight / 2){
+          window.scrollTo(0,$("#guang").offset().top);
+        }
+               $(".des").css("bottom","0px");
+        subs++;
+        }
+    }
+    $.repl=function(str){
+        str=str.replace("\r\n","<br/>");
+        str=str.replace("\n","<br/>");
+        str=str.replace("█","<br/>");
+        return str;
+    }
+});
+</script>
+</head>
+
+<body>
+<audio src="def.mp3" autoplay="autoplay"></audio>
+
+<center>
+<div align="left" class="content"><span id="txt"></span><span id="guang"></span>
+<span></span>
+</div>
+</center>
+
+<!--下面是浮动的桃心-->
+<div id="bubbles" style="visibility:hidden">
+<img src="./css/1.png">
+<img src="./css/2.png">
+<img src="./css/1.png">
+</div>
+<!---->
+
+</body></html>
